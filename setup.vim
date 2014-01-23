@@ -39,3 +39,4 @@ let g:pymode_lint_cwindow = 1
 let g:pymode_lint_ignore = "E2,E501"
 let g:pymode_lint_checker="pyflakes"
 
+let g:pydiction_location = '/home/robert/.vim/bundle/pydiction/complete-dict'
