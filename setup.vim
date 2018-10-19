@@ -1,10 +1,40 @@
-" Pathogen setup to point to bundle folder and load the pathogen script for
-" submodules
-let g:SuperTabDefaultCompletionType = "<c-n>"
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-call pathogen#infect()
-call pathogen#helptags()
+set nocompatible              " be iMproved, required
+filetype off                  " required
 
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'git://git.wincent.com/command-t.git'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'motemen/git-vim'
+Plugin 'djoshea/vim-matlab-fold'
+Plugin 'vim-scripts/doxygen-support.vim'
+Plugin 'vim-scripts/cscope.vim' 
+
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
+"
+"
+syntax on
 " Standard tab settings at 4 spaces instead of tab chars
 set shiftwidth=4 tabstop=4 expandtab
 
@@ -69,3 +99,10 @@ nnoremap  <leader>fe :call cscope#find('e', expand('<cword>'))<CR>
 nnoremap  <leader>ff :call cscope#find('f', expand('<cword>'))<CR>
 " i: Find files #including this file
 nnoremap  <leader>fi :call cscope#find('i', expand('<cword>'))<CR>
+
+let g:cscope_silent = 1
+
+nnoremap  <leader>dl :DoxyBlockLong<CR>
+nnoremap  <leader>ds :DoxyBlockShort<CR>
+
+let g:SuperTabDefaultCompletionType = "<c-n>"

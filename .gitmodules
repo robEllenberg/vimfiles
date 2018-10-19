@@ -46,3 +46,9 @@
 [submodule "bundle/command-t"]
 	path = bundle/command-t
 	url = https://github.com/wincent/command-t.git
+[submodule "bundle/fastfold"]
+	path = bundle/fastfold
+	url = https://github.com/Konfekt/FastFold
+[submodule "bundle/Vundle.vim"]
+	path = bundle/Vundle.vim
+	url = https://github.com/VundleVim/Vundle.vim.git
