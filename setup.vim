@@ -106,3 +106,4 @@ nnoremap  <leader>dl :DoxyBlockLong<CR>
 nnoremap  <leader>ds :DoxyBlockShort<CR>
 
 let g:SuperTabDefaultCompletionType = "<c-n>"
+
