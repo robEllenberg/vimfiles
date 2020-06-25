@@ -10,7 +10,6 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
-Plugin 'git://git.wincent.com/command-t.git'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'motemen/git-vim'
 Plugin 'djoshea/vim-matlab-fold'
@@ -104,6 +103,7 @@ let g:cscope_silent = 1
 
 nnoremap  <leader>dl :DoxyBlockLong<CR>
 nnoremap  <leader>ds :DoxyBlockShort<CR>
+nnoremap  <leader>dh :DoxyFILEHeader<CR>
 
 let g:SuperTabDefaultCompletionType = "<c-n>"
 

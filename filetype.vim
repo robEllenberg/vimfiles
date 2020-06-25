@@ -13,4 +13,5 @@ augroup filetypedetect
     au! BufRead,BufNewFile *.m1s  setfiletype vbnet
     au! BufRead,BufNewFile *.ngc,*.nc  setfiletype ngc
     au! BufRead,BufNewFile *.comp  setfiletype c
+    au! BufRead,BufNewFile *.build  setfiletype meson
 augroup END
