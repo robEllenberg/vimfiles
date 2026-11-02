@@ -15,6 +15,7 @@ Plugin 'motemen/git-vim'
 Plugin 'djoshea/vim-matlab-fold'
 Plugin 'vim-scripts/doxygen-support.vim'
 Plugin 'vim-scripts/cscope.vim' 
+Plugin 'liuchengxu/graphviz.vim' 
 
 
 " All of your Plugins must be added before the following line
@@ -104,6 +105,14 @@ let g:cscope_silent = 1
 nnoremap  <leader>dl :DoxyBlockLong<CR>
 nnoremap  <leader>ds :DoxyBlockShort<CR>
 nnoremap  <leader>dh :DoxyFILEHeader<CR>
+
+" Buffer switching
+map gn :bnext<cr>
+map gp :bprevious<cr>
+map gd :bdelete<cr>  
+map <leader>n :bnext<cr>
+map <leader>p :bprevious<cr>
+
 
 let g:SuperTabDefaultCompletionType = "<c-n>"
 

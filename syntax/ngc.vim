@@ -11,10 +11,10 @@ endif
 syn case ignore
 
 :syntax match ngcConstant /\-\=[.0-9]*/
-:syntax keyword ngcConditional if else endif
+:syntax keyword ngcConditional if else elseif endif
 :syntax keyword ngcRepeat do while endwhile break continue repeat endrepeat
 :syntax keyword ngcFunction sub endsub call return
-:syntax keyword ngcOperator EQ NE GT GE LT LE ABS ACOS ASIN ATAN COS EXP FIX FUP LN ROUND SIN SQRT TAN MOD AND OR
+:syntax keyword ngcOperator EQ NE GT GE LT LE ABS ACOS ASIN ATAN COS EXP FIX FUP LN ROUND SIN SQRT TAN MOD AND OR MAX MIN SIGN U_INCH U_MM U_MOTION
 :syntax match ngcOperatorPunc "[%\-+*/\[\]]"
 :syntax match ngcIdentifier /#<*[_a-zA-Z_0-9]*>*/
 :syntax match ngcLabel /^\s*o\d* /he=e-1,me=e-1
@@ -31,11 +31,11 @@ syn case ignore
 :syntax match ngcPrint /(\s*PRINT\s*,.*)/ contains=ngcIdentifier
 :syntax match ngcAbort /(\s*ABORT\s*,.*)/ contains=ngcIdentifier
 :syntax match ngcDebug /(\s*DEBUG\s*,.*)/ contains=ngcIdentifier
-:syntax keyword ngcGCodes g00 g01 g02 g03 g04 g0 g1 g2 g3 g4 g7 g07 g8 g08 g10 g17 g18 g19 g20 g21 g28 g30 g33 g33.1 g38.2 g38.x g40 g41 g41.1 g42 g42.1 g43 g43.1 g49 g53 g54 g55 g56 g57 g58 g59 g59.1 g59.2 g59.3 g61 g61.1 g64 g76 g80 g81 g82 g83 g84 g85 g86 g87 g88 g89 g90 g90.1 g91 g91.1 g92 g92.1 g92.2 g92.3 g93 g94 g95 g96 g97 g98 g99
-:syntax keyword ngcMCodes M00 M01 M02 M03 M04 M05 M06 M07 M08 M09 M0 M1 M2 M3 M4 M5 M6 M7 M8 M9 M10 M11 M19 M30 M48 M49 M50 M51 M52 M53 M60 M62 M63 M64 M65 M66 
+:syntax keyword ngcGCodes g00 g01 g02 g03 g04 g0 g1 g2 g3 g4 g7 g07 g8 g08 g10 g17 g18 g19 g20 g21 g28 g30 g33 g33.1 g38.2 g38.x g40 g41 g41.1 g42 g42.1 g43 g43.1 g49 g50 g52 g53 g54 g54.1 g55 g56 g57 g58 g59 g59.1 g59.2 g59.3 g61 g61.1 g64 g64.1 g76 g80 g80.9 g81 g82 g83 g84 g85 g86 g87 g88 g89 g90 g90.1 g91.2 g91 g91.1 g91.2 g92 g92.1 g92.2 g92.3 g93 g94 g95 g96 g97 g98 g99
+:syntax keyword ngcMCodes M00 M01 M02 M03 M04 M05 M06 M07 M08 M09 M0 M1 M2 M3 M4 M5 M6 M7 M8 M9 M10 M11 M19 M27 M28 M30 M48 M49 M50 M51 M52 M53 M60 M62 M63 M64 M65 M66 M70 M72 M73 M98 M99
 :syntax match ngcMUserCodes /\s*M1\d\d\s*/
 :syntax match ngcAxes /\s[xyzuvwabc]\(-\|\[\|\d\)/he=e-1,me=e-1
-:syntax match ngcSpecials /\s[ijkrelpds]\(-\|\[\|\d\)/he=e-1,me=e-1
+:syntax match ngcSpecials /\s[ijkrelpqds]\(-\|\[\|\d\)/he=e-1,me=e-1
 :syntax match ngcFeed /\(\s\|^\)f\d/he=e-1,me=e-1
 :syntax match ngcTool /\(\s\|^\)[ht]\d/he=e-1,me=e-1
 
